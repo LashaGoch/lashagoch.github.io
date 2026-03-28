@@ -1,0 +1,10 @@
+---
+const { title, category, description, link, tags } = Astro.props;
+---
+<article class="card" role="article">
+  <p class="card-meta">{category}</p>
+  <h3 class="card-title">{title}</h3>
+  <p class="card-desc">{description}</p>
+  <p class="card-meta">{tags.join(' • ')}</p>
+  <a class="button" href={link} target="_blank" rel="noopener">View Project</a>
+</article>

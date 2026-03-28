@@ -1,0 +1,23 @@
+{
+  "name": "lashagoch.github.io",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier --write \"**/*.{md,mdx,astro,ts,tsx,js,json,yaml,yml}\"",
+    "lint": "npm run format",
+    "deploy": "npm run build && npm run gh-pages",
+    "gh-pages": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}
