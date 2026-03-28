@@ -1,46 +1,127 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 ---
-<MainLayout title="About" description="About Lasha Gochiashvili, experience and achievements">
-  <section class="section" aria-labelledby="about-title">
-    <p class="heading-eyebrow">About</p>
-    <h1 class="heading-1" id="about-title">Experience & Leadership</h1>
+<MainLayout title="About" description="About Lasha Gochiashvili, senior data scientist">
+  <section class="about-shell" aria-label="About Lasha Gochiashvili">
+    <div class="about-intro">
+      <p class="section-label">About</p>
+      <h1 class="about-title">Impact-driven approach to AI and data.</h1>
+      <p class="about-text">
+        I'm Lasha Gochiashvili, a Senior Data Scientist specializing in generative AI, machine learning, analytics, and data platforms. I design and deliver solutions that transform data into actionable insights, supporting decision-making across organizations and public-facing initiatives.
+      </p>
+    </div>
 
-    <h2 class="heading-2">Professional Experience</h2>
-    <ul>
-      <li>
-        <strong>Senior Data Scientist, National Analytics Lab</strong> (2020–present)
-        <p>
-          Led AI/ML products for public policy analytics, built governance-ready ML pipelines, and
-          scaled dashboards for senior stakeholders.
-        </p>
-      </li>
-      <li>
-        <strong>Data Science Lead, SmartCity Insights</strong> (2017–2020)
-        <p>
-          Designed a city-wide dashboarding platform on Tableau and Power BI ingesting 300+ daily streams.
-        </p>
-      </li>
-    </ul>
+    <div class="section-block" aria-labelledby="work-experience-title">
+      <p class="section-label">Work Experience</p>
+      <h2 class="section-title" id="work-experience-title">Professional timeline</h2>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <h3 class="item-title">Senior Data Scientist</h3>
+          <p class="item-meta">Ingersoll Rand · New York, NY · Apr 2025 – Present</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Data Scientist</h3>
+          <p class="item-meta">Ingersoll Rand · New York, NY · Jun 2024 – Apr 2025</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Data Management Intern</h3>
+          <p class="item-meta">Delaware Department of Technology and Information · Remote, USA · Jan 2024 – May 2024</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Teaching Assistant</h3>
+          <p class="item-meta">Touro University · New York, NY · Oct 2023 – Jan 2025</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Data Analytics Manager</h3>
+          <p class="item-meta">Ingersoll Rand · Barcelona, Spain · Aug 2022 – Jan 2023</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Senior Digital Marketing Analyst</h3>
+          <p class="item-meta">Ingersoll Rand · Barcelona, Spain · Mar 2019 – Aug 2022</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Data Analyst</h3>
+          <p class="item-meta">Gardner Denver · Warsaw, Poland · Dec 2016 – Mar 2019</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Marketing Specialist</h3>
+          <p class="item-meta">Aquafilter Europe · Lodz, Poland · Mar 2016 – Nov 2016</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Project Manager</h3>
+          <p class="item-meta">Start - Business Solutions · Tbilisi, Georgia · Apr 2013 – Sep 2014</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">Business Analyst</h3>
+          <p class="item-meta">Synergy Group · Tbilisi, Georgia · Aug 2011 – Apr 2013</p>
+        </li>
+      </ol>
+    </div>
 
-    <h2 class="heading-2">Education</h2>
-    <ul>
-      <li>Master of Science in Data Science (Thesis: Scalable ML for Socioeconomic Forecasting)</li>
-      <li>BSc in Computer Science and Economics</li>
-    </ul>
+    <div class="section-block" aria-labelledby="education-title">
+      <p class="section-label">Education</p>
+      <h2 class="section-title" id="education-title">Academic credentials</h2>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <h3 class="item-title">M.S. in Data Analytics</h3>
+          <p class="item-meta">Touro University, Graduate School of Technology · New York, NY · 2023 – 2024</p>
+          <p class="item-note">GPA 4.0 · Valedictorian</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">M.S. in Data Science and Business Analytics</h3>
+          <p class="item-meta">University of Warsaw · Warsaw, Poland · 2019 – 2021</p>
+          <p class="item-note">Master’s Thesis: Predicting Life Expectancy with ML</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">M.S. in Data Science</h3>
+          <p class="item-meta">University of Barcelona · Spain · 2021</p>
+          <p class="item-note">Exchange Semester</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">M.S. in International Marketing</h3>
+          <p class="item-meta">University of Lodz · Poland · 2014 – 2016</p>
+          <p class="item-note">Erasmus Mundus Scholar</p>
+        </li>
+        <li class="timeline-item">
+          <h3 class="item-title">B.B.A.</h3>
+          <p class="item-meta">Tbilisi State University · Georgia · 2008 – 2012</p>
+          <p class="item-note">Graduated with honors</p>
+        </li>
+      </ol>
+    </div>
 
-    <h2 class="heading-2">Certifications</h2>
-    <ul>
-      <li>Microsoft Certified: Azure AI Engineer Associate</li>
-      <li>Tableau Desktop Specialist</li>
-      <li>Google Cloud Professional Data Engineer</li>
-    </ul>
+    <div class="section-block" aria-labelledby="highlights-title">
+      <p class="section-label">Highlights</p>
+      <h2 class="section-title" id="highlights-title">Impact & achievements</h2>
+      <ul class="bullet-list">
+        <li>Built enterprise AI agents unlocking $16M+ revenue impact and reducing manual work by 90%</li>
+        <li>Saved 20,000+ hours annually for 160+ sales professionals through AI automation</li>
+        <li>Developed ML models targetting $50M in potential lost revenue through customer conversion prediction</li>
+        <li>Founding contributor to an AI Center of Excellence backed by $1.5M investment</li>
+        <li>Built production-grade RAG and LLM systems using Snowflake Cortex, enabling enterprise AI adoption</li>
+        <li>Designed AI-driven document intelligence systems processing thousands of internal records</li>
+        <li>Delivered a statewide education analytics platform (Power BI) with 5M+ records, used for policy decision-making</li>
+        <li>Modernized 15+ public-sector data visualizations and launched live open datasets via APIs</li>
+        <li>Featured contributor to the Delaware Open Data Portal improving public data accessibility</li>
+        <li>Built analytics systems tracking $1B+ recurring revenue across global business units</li>
+        <li>Delivered dashboards and reporting systems used by 300+ business users and executives</li>
+        <li>Drove 150% uplift in lead generation through AI-driven experimentation and A/B testing</li>
+        <li>Grew enterprise customer database from 100K to 800K records in under 1 year</li>
+        <li>Published AI & data science content reaching 19,000+ readers and contributed datasets with 38,900+ views / 7,000+ downloads</li>
+        <li>Published research read by 1,000+ academics on ResearchGate</li>
+        <li>Invited Keynote Speaker (ISPC 2025) on AI agents and organizational transformation at Adelphi University NY</li>
+        <li>Guest speaker and workshop instructor on AI and generative systems at Touro University in New York</li>
+        <li>Selected as Judge for Data.org AI2AI Challenge, supporting ethical and inclusive AI innovation</li>      
 
-    <h2 class="heading-2">Selected Achievements</h2>
-    <ul>
-      <li>Published ResearchGate study on ethical AI for public sector planning</li>
-      <li>Presented at global Data For Good conference (2024)</li>
-      <li>Led cross-functional team to reduce reporting latency by 65% in production dashboards</li>
-    </ul>
+      </ul>
+    </div>
+
+    <div class="section-block" aria-labelledby="additional-title">
+      <p class="section-label">Additional</p>
+      <h2 class="section-title" id="additional-title">Languages</h2>
+      <ul class="bullet-list">
+        <li>Languages: Georgian (native), English (professional), Spanish (working), Russian (limited working proficiency), Polish (limited working proficiency)</li>
+      </ul>
+    </div>
   </section>
 </MainLayout>
