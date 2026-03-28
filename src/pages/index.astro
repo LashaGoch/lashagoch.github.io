@@ -1,42 +1,9 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Hero from '../components/Hero.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import WritingCard from '../components/WritingCard.astro';
-import { projects } from '../content/projects';
-import { writings } from '../content/writings';
+import SocialLinks from '../components/SocialLinks.astro';
 ---
-<MainLayout title="Home" description="Lasha Gochiashvili senior data scientist portfolio">
+<MainLayout title="Home" description="Lasha Gochiashvili personal portfolio">
   <Hero />
-  <section class="section" aria-labelledby="featured-projects">
-    <p class="heading-eyebrow">Featured work</p>
-    <h2 class="heading-2" id="featured-projects">Projects</h2>
-    <div class="card-grid" role="list">
-      {projects.slice(0, 3).map((project) => (
-        <ProjectCard
-          title={project.title}
-          category={project.category}
-          description={project.description}
-          link={project.link}
-          tags={project.tags}
-        />
-      ))}
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="featured-writings">
-    <p class="heading-eyebrow">Recent thinking</p>
-    <h2 class="heading-2" id="featured-writings">Blog & Publications</h2>
-    <div class="card-grid" role="list">
-      {writings.map((writing) => (
-        <WritingCard
-          title={writing.title}
-          type={writing.type}
-          source={writing.source}
-          description={writing.description}
-          link={writing.link}
-        />
-      ))}
-    </div>
-  </section>
+  <SocialLinks />
 </MainLayout>
