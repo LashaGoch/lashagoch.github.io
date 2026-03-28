@@ -1,0 +1,52 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../content/projects';
+const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category)))];
+---
+<MainLayout title="Projects" description="Selected projects by Lasha Gochiashvili">
+  <section class="section" aria-labelledby="projects-title">
+    <p class="heading-eyebrow">Projects</p>
+    <h1 class="heading-1" id="projects-title">Project portfolio</h1>
+    <p>
+      Focus areas: Generative AI, applied ML, dashboards, public-impact analytics, and data storytelling.
+    </p>
+    <div id="categoryToolbar" style="margin: 1.2rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem;">
+      {categories.map((cat) => (
+        <button class="button" data-cat={cat} type="button">{cat}</button>
+      ))}
+    </div>
+    <div id="projectGrid" class="card-grid" role="list">
+      {projects.map((project) => (
+        <div data-category={project.category} style="width: 100%">
+          <ProjectCard
+            title={project.title}
+            category={project.category}
+            description={project.description}
+            link={project.link}
+            tags={project.tags}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+  <script>
+    const buttons = document.querySelectorAll('#categoryToolbar [data-cat]');
+    const cards = document.querySelectorAll('#projectGrid [data-category]');
+
+    function setActive(category) {
+      buttons.forEach((btn) => {
+        btn.style.opacity = btn.dataset.cat === category ? '1' : '0.7';
+      });
+      cards.forEach((card) => {
+        card.style.display = category === 'All' || card.dataset.category === category ? 'block' : 'none';
+      });
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => setActive(btn.dataset.cat));
+    });
+
+    setActive('All');
+  </script>
+</MainLayout>

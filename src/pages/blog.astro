@@ -1,0 +1,25 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import WritingCard from '../components/WritingCard.astro';
+import { writings } from '../content/writings';
+---
+<MainLayout title="Blog & Publications" description="Writing and publications by Lasha Gochiashvili">
+  <section class="section" aria-labelledby="blog-title">
+    <p class="heading-eyebrow">Writing</p>
+    <h1 class="heading-1" id="blog-title">Blog & Publications</h1>
+    <p>
+      Curated posts and research outputs on generative AI, ML in social impact, and data storytelling.
+    </p>
+    <div class="card-grid" role="list">
+      {writings.map((writing) => (
+        <WritingCard
+          title={writing.title}
+          type={writing.type}
+          source={writing.source}
+          description={writing.description}
+          link={writing.link}
+        />
+      ))}
+    </div>
+  </section>
+</MainLayout>

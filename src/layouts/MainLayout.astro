@@ -1,0 +1,32 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+const { title, description } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Lasha Gochiashvili</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a0f16" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <Navbar />
+      </header>
+      <main><slot /></main>
+      <footer class="footer">
+        <Footer />
+      </footer>
+    </div>
+  </body>
+</html>
